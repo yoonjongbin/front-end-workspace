@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제3.html</title>
+</head>
+<body>
+    <h1>주문하기</h1>
+    <br>
+    <form method="post">
+        
+        <label for="person"></label>
+        고객명 : <input type="text" name="person" id="person" required autofocus>
+
+        <br><br>
+
+        <label for="phone"></label>
+        전화번호 : <input type="tel" name="phone" id="phone">
+
+        <br><br>
+
+        <label for="mail"></label>
+        E-mail : <input type="email" name="mail" id="mail">
+        
+        <br><br>
+
+        <fieldset>
+            <legend>피자사이즈</legend>
+
+            
+            <input type="radio" name = "size" id = "small" checked>
+            <label for="small">Small</label>
+            <br>
+            <input type="radio" name = "size" id = "medium">
+            <label for="medium">Medium</label>
+            <br>
+            <input type="radio" name = "size" id = "large">
+            <label for="large">Large</label>
+
+        </fieldset>
+
+        <br><br>
+
+        <fieldset>
+            <legend>토핑선택</legend>
+
+            
+            <input type="checkbox" name = "topping" id = "bacon">
+            <label for="bacon">베이컨</label>
+            <br>
+            <input type="checkbox" name = "topping" id = "cheese">
+            <label for="cheese">치즈</label>
+            <br>
+            <input type="checkbox" name = "topping" id = "onion">
+            <label for="onion">양파</label>
+            <br>
+            <input type="checkbox" name = "topping" id = "mushroom">
+            <label for="mushroom">버섯</label>
+
+
+
+        </fieldset>
+
+        <br><br>
+
+        <label for="time">희망배송시간 : </label>
+        <input type="time" name="time" id="time" required autofocus>
+        
+        <br><br>
+
+        <label for="require">배송 시 요청사항</label>
+        <br>
+        <textarea name="require" id="require" cols="30" rows="10" style="resize: none;" placeholder="내용을 입력하세요."></textarea>
+        <br>
+        <button type = "submit">주문하기</button>
+
+    </form>
+</body>
+</html>
