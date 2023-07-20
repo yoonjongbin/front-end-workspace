@@ -1,0 +1,16 @@
+div.div2{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    /* position: relative;
+    top: 100px; left: 200px; */
+}
+
+#div12{
+    width: 250px;
+    height: 250px;
+    background-color: aqua;
+    position: fixed; top : 250px; left: 250px;
+}
+
+
