@@ -3,14 +3,19 @@ div.div2{
     height: 500px;
     background-color: black;
     /* position: relative;
-    top: 100px; left: 200px; */
+    top: 600px; left: 600px; */
 }
 
 #div12{
     width: 250px;
     height: 250px;
     background-color: aqua;
-    position: fixed; top : 250px; left: 250px;
+    /* position: fixed;     // fixed는 상위 포지션 요소와 상관없이 무조건 배치하고 고정*/
+    /* position: absolute;  // absolute는 상위 포지션에 relative가 있다면 그 포지션 속성을 가지고있는 컨테이너 기준으로 배치한다. 없으면 흐름의 영향 안받음*/
+    
+    /* top : 250px; left: 250px; */
+    /* margin-left: 250px; */
+
 }
 
 
