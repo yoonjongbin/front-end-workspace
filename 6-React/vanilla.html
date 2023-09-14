@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Total clicks : <span id="num"></span></h1>
+
+    <button id="increase" onclick="setCount()">Click!</button>
+
+    <script>
+      //   const btnIncrease = document.querySelector("#increase");
+      const num = document.querySelector("#num");
+      //   let counter = 0;
+
+      const setCount = () => {
+        // num.innerHTML = Number(num.innerHTML) + 1;   // 내가 한거
+
+        // counter = counter + 1;   // 방법 1
+        // num.innerHTML = counter;
+
+        num.innerHTML = parseInt(num.innerHTML) + 1; // 방법 2
+      };
+
+      //   btnIncrease.addEventListener("click", setCount());
+    </script>
+  </body>
+</html>

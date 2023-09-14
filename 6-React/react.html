@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+            html 태그들을 스크립트 태그안에서 모두 구현하는게 리액트 방식이다.
+    -->
+    <script>
+      let counter = 0;
+
+      const setCount = () => {
+        counter += 1;
+        console.log(counter);
+
+        const root = document.getElementById("root");
+
+        const h1 = React.createElement("h1", null, `Total clicks : ${counter}`); // 자바스크립트의 createElement와 같다 1(태그), 2(속성값), 3(내용)
+        const btn = React.createElement(
+          "button",
+          { onClick: setCount },
+          `Click!`
+        );
+        const container = React.createElement("div", null, h1, btn); // div 컨테이너 안에 h1과 button을 담는다.
+
+        ReactDOM.render(container, root);
+      };
+
+      const root = document.getElementById("root");
+
+      const h1 = React.createElement("h1", null, `Total clicks : ${counter}`); // 자바스크립트의 createElement와 같다 1(태그), 2(속성값), 3(내용)
+      const btn = React.createElement(
+        "button",
+        { onClick: setCount },
+        `Click!`
+      );
+      const container = React.createElement("div", null, h1, btn); // div 컨테이너 안에 h1과 button을 담는다.
+
+      ReactDOM.render(container, root);
+    </script>
+  </body>
+</html>
