@@ -1,35 +1,9 @@
-import { useState } from "react";
-
-const Button = ({ text, click }) => {
-  return <button onClick={click}>{text}</button>;
-};
+// import Counter from "./components/Counter";
+import Converter from "./components/Converter";
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
-
-  const plus = () => {
-    setCounter(counter + 1);
-  };
-
-  const minus = () => {
-    setCounter(counter - 1);
-  };
-
-  return (
-    <div>
-      <h1>Total clicks : {counter}</h1>
-
-      <Button text="+1" click={plus} />
-      <Button text="-1" click={minus} />
-
-      {/* <button onClick={plus}>+1</button>
-      <button onClick={minus}>-1</button> */}
-
-      {/* <button onClick={() => setCounter(counter + 1)}>+1</button>
-      <button onClick={() => setCounter(counter - 1)}>-1</button> 
-      내가한거 */}
-    </div>
-  );
+  // 공통적인 기능을 Components로 만들어서 편리하게 사용가능
+  return <Converter />; // Counter Components를 통째로 넘긴다.
 };
 
 export default App;
