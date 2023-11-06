@@ -45,7 +45,7 @@ const Home = ({ list, deleteBeverage }) => {
 };
 
 const Create = ({ addBeverage }) => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // 라우터와 같음
 
   // prop 방식으로 하면 귀찮기 때문에 요소를 바로 셋팅
   // console.log(prop.addBeverage);
@@ -53,7 +53,10 @@ const Create = ({ addBeverage }) => {
 
   const onSubmit = (event) => {
     // 하위 컴포넌트가 상위 컴포넌트에게 데이터를 넘길수 없다
+
+    // 새로고침 없이 페이지 이동
     event.preventDefault();
+
     const title = event.target.title.value;
     const desc = event.target.desc.value;
     addBeverage(title, desc);
@@ -104,7 +107,7 @@ function App() {
 
   const deleteBeverage = (id) => {
     // filter는 조건처리
-    const newList = beverages.filter((item) => item.id !== parseInt(id));
+    const newList = beverages.filter((item) => item.id !== parseInt(id)); // id가 같이 않은 것만 뽑는다.
     setBeverages(newList);
   };
 
